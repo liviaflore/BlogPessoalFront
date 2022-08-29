@@ -1,35 +1,38 @@
 import React from 'react';
+import {Grid} from '@mui/material';
 import Home from './paginas/home/Home';
-import logo from './logo.svg';
 import './App.css';
 
 
 
 function App() {
   return(
-    <Home />
+    <>
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={12}>
+        <Home />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Home />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Home />
+      </Grid>
+      <Grid item xs={12} sm={3}>
+        <Home />
+      </Grid>
+      <Grid item xs={12} sm={3}>
+        <Home />
+      </Grid>
+      <Grid item xs={12} sm={3}>
+        <Home />
+      </Grid>
+      <Grid item xs={12} sm={3}>
+        <Home />
+      </Grid>
+    </Grid>
+    </>
   );
 }
-
-  // return (
-    // <div className="App">
-     //  <header className="App-header">
-       //  <img src={logo} className="App-logo" alt="logo" />
-       //  <p>
-       //    Hello World!
-       //  </p>
-
-        // <a
-         //  className="App-link"
-         //  href="https://reactjs.org"
-         //  target="_blank"
-          // rel="noopener noreferrer"
-        // >
-         //  Learn React
-       //  </a>
-     //  </header>
-      // </div>
-  // );
-// }
 
 export default App;
