@@ -1,11 +1,30 @@
 import React from "react";
+import {Grid, Paper} from '@mui/material';
 import'./Home.css';
 
 function Home(){
     return(
         <>
-        <h1 className="titulo">Home</h1>
-        <img src='https://i.imgur.com/ZnDBeln.jpeg' alt='Imagem de Jupiter capturada pelo telescópio Webb da NASA' className="img"/>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={8}>
+            <Paper style={{ height: "100vh", background: "lightgrey" }}/>
+
+        </Grid>
+
+        <Grid item container direction="column" xs={12} sm={4} spacing={2}>
+          <Grid item>
+            <Paper style={{ height: "49vh", background: "purple" }}/>
+
+          </Grid>
+
+          <Grid item>
+            <Paper style={{ height: "49vh", background: "red" }}/>
+
+          </Grid>
+
+        </Grid>        
+
+      </Grid>
         </>
     );
 }
