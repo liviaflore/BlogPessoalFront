@@ -1,0 +1,13 @@
+.textos1 {
+    font-weight: bold !important;
+}
+
+.imagem {
+    background-color: #3F51B5;
+    width: 50vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://forums.macrumors.com/attachments/monterey-mac-jpg.1788406/);
+    background-repeat: no-repeat;
+}
