@@ -1,13 +1,56 @@
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+  }
+
+  .login {
+    width: 50%;
+    height: 100%;
+    background: #2C3034;
+    left: 0;
+    position: absolute;
+  }
+
+  .signup {
+    width: 50%;
+    height: 100%;
+    background: #f2eee3;
+    right: 0;
+    position: absolute;
+  }
+
+  .titulologin {
+    width: 250px;
+    margin: 0 auto;
+    top: 30%;
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+
+  }
+
 .textos1 {
     font-weight: bold !important;
 }
 
-.imagem {
-    background-color: #3F51B5;
-    width: 50vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url(https://forums.macrumors.com/attachments/monterey-mac-jpg.1788406/);
-    background-repeat: no-repeat;
+.imagem1 {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #f2eee3 url(https://forums.macrumors.com/attachments/monterey-mac-jpg.1788406/);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.imagem2 {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #e74c3c url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-gMX5fS_rUqg%2FXfLBGokAzAI%2FAAAAAAAAjEY%2Fqs-2a28y3g4ruhktycDX2ApIUhhh01WMgCLcBGAsYHQ%2Fs2560%2Fmacos-mojave-dusk-mode-stock-el-2560x1440.jpg&f=1&nofb=1);
+  background-size: cover;
+  background-position: 50% 50%;
 }
