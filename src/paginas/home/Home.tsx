@@ -22,6 +22,8 @@ function Home(){
                     <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg" alt="Imagem do espaço capturada pela NASA, por meio do James Webb Space Telescope" 
                     width="100%" height="100%" />
                 </Grid>
+
+                
                 <Grid xs={12} className='postagens'>
                 </Grid>
             </Grid>
