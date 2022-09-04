@@ -1,0 +1,26 @@
+.imagem2 {
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100vh;
+    min-height: 100vh;
+    background: #e74c3c url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-gMX5fS_rUqg%2FXfLBGokAzAI%2FAAAAAAAAjEY%2Fqs-2a28y3g4ruhktycDX2ApIUhhh01WMgCLcBGAsYHQ%2Fs2560%2Fmacos-mojave-dusk-mode-stock-el-2560x1440.jpg&f=1&nofb=1);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .titulocadastro {
+    align-items: center;
+    font-weight: bold !important;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.1rem;
+  }
+
+  .btnCancelar {
+    text-decoration: none;
+  }
+
+  .btnCadastrar {
+    text-decoration: none;
+    margin-left: 20px !important;
+  }
