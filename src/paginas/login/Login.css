@@ -1,48 +1,49 @@
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -999;
+
+
+  .text-decorator-none {
+    text-decoration: none;
   }
 
-  .login {
+  /*.login {
     width: 50%;
     height: 100%;
     background: #2C3034;
-    left: 0;
-    position: absolute;
-  }
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    background-position: 50% 50%;
+  }*/
 
   .signup {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background: #f2eee3;
-    right: 0;
-    position: absolute;
+    align-items: center;
+    justify-content: center;
+
   }
 
   .titulologin {
-    width: 250px;
-    margin: 0 auto;
-    top: 30%;
-    position: absolute;
-    left: 50%;
-    margin-left: -125px;
+    align: center;
+    font-weight: bold;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.1rem;
 
   }
 
 .textos1 {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }
 
 .imagem1 {
-  position: absolute;
+  background-repeat: no-repeat;
   right: 0;
-  width: 50%;
-  height: 100%;
+  width: 100vh;
+  min-height: 100vh;
   background: #f2eee3 url(https://forums.macrumors.com/attachments/monterey-mac-jpg.1788406/);
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
 }
 
 .imagem2 {
