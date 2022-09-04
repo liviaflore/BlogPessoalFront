@@ -14,7 +14,7 @@ function Login() {
                <form>
                 <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='titulologin'> Olá! </Typography>
                 <TextField id='Usuario' label='Usuario' name='Usuario' variant='outlined' margin='normal' fullWidth/>
-                <TextField id='Senha' label='Senha' name='Senha' variant='outlined' margin='normal' fullWidth/>
+                <TextField id='Senha' label='Senha' name='Senha' variant='outlined' margin='normal' type='password' fullWidth/>
                   <Box marginTop={2} textAlign='center'>
                     <Link to='/home' className='text-decorator-none'>
                       <Button type='submit' variant='contained' color='primary'>
@@ -27,7 +27,9 @@ function Login() {
                 <Box>
                  <Typography variant='subtitle1' gutterBottom color='textPrimary' align='center'> Não tem uma conta?</Typography>
                 </Box>
+                <Link to='/cadastroUsuario'>
                  <Typography variant='subtitle1' gutterBottom color='textPrimary' align='center' className='textos1'>  Cadastre-se! </Typography>
+                </Link>
                </Box>
 
             </Box>

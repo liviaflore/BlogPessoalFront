@@ -24,8 +24,8 @@
   }
 
   .titulologin {
-    align: center;
-    font-weight: bold;
+    align-items: center;
+    font-weight: bold !important;
     justify-content: center;
     font-family: 'Jost', sans-serif;
     letter-spacing: 0.1rem;
@@ -34,6 +34,7 @@
 
 .textos1 {
   font-weight: bold !important;
+  margin-left: 10px !important;
 }
 
 .imagem1 {
@@ -44,14 +45,4 @@
   background: #f2eee3 url(https://forums.macrumors.com/attachments/monterey-mac-jpg.1788406/);
   background-size: cover;
   background-position: center;
-}
-
-.imagem2 {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: #e74c3c url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-gMX5fS_rUqg%2FXfLBGokAzAI%2FAAAAAAAAjEY%2Fqs-2a28y3g4ruhktycDX2ApIUhhh01WMgCLcBGAsYHQ%2Fs2560%2Fmacos-mojave-dusk-mode-stock-el-2560x1440.jpg&f=1&nofb=1);
-  background-size: cover;
-  background-position: 50% 50%;
 }
