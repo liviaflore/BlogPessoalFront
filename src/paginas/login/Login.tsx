@@ -3,7 +3,7 @@ import {Grid, Box, Typography, TextField, Button} from '@mui/material';
 import {Link, useNavigate} from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 
-import { api } from '../../services/Service';
+import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 
 import './Login.css';
@@ -16,9 +16,9 @@ function Login() {
   const [userLogin, setUserLogin] = useState<UserLogin>(
     {
       id: 0,
-      nome: '',
+      //nome: '',
       usuario: '',
-      foto: '',  
+      //foto: '',  
       senha: '',
       token: ''
     }
@@ -42,8 +42,7 @@ function Login() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>){
       e.preventDefault();
       try{
-          const resposta = await api.post(`/usuarios/logar`, userLogin)
-          setToken(resposta.data.token)
+          await login(`/usuarios/logar`, userLogin, setToken)
 
           alert('Usuário logado com sucesso!');
       }catch(error){
