@@ -27,23 +27,23 @@ function Navbar(){
                         
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                postagens
+                                Postagens
                             </Typography>
                         </Box>
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                temas
+                                Temas
                             </Typography>
                         </Box>
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                cadastrar tema
+                                Cadastrar Tema
                             </Typography>
                         </Box>
                         <Link to='/login'>
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                Logout
+                                Sair
                             </Typography>
                         </Box>
                         </Link>
