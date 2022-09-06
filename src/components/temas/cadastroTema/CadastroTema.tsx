@@ -2,11 +2,12 @@ import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@mui/material"
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, post, put } from '../../../services/Service';
+import { findByTestId } from '@testing-library/react';
 import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 
 import './CadastroTema.css'
-import { findByTestId } from '@testing-library/react';
+
 
 
 function CadastroTema() {
