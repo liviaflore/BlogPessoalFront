@@ -16,7 +16,7 @@ function ListaTema() {
   const[token, setToken] = useLocalStorage('token');
 
   let history = useNavigate();
-     if(token == ''){
+     if(token === ''){
       alert("Você precisa estar logado!")
       history("/login")
      }
