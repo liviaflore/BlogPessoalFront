@@ -19,8 +19,8 @@ function CadastroPost() {
 
     useEffect(()=>{
         if(token === ''){
-            alert("Você precisa estar logado!")
-            history("/login")
+            alert("Você precisa estar logado!");
+            history("/login");
         }
 
     }, [token])
@@ -28,43 +28,43 @@ function CadastroPost() {
     const[tema, setTema] = useState<Tema>({
         id: 0,
         descricao: ''
-    })
+    });
 
     const[postagem, setPostagem] = useState<Postagem>({
         id: 0,
         titulo: '',
         texto: '',
         tema: null
-    })
+    });
 
     useEffect(() => {
         setPostagem({
             ...postagem,
             tema: tema
-    })
-    }, [tema])
+    });
+    }, [tema]);
 
     useEffect(() => {
-        getTemas()
+        getTemas();
         if (id !== undefined) {
-            findByIdPostagem(id)
+            findByIdPostagem(id);
         }
-    }, [id])
+    }, [id]);
 
     async function getTemas() {
         await busca("/temas", setTemas, {
             headers: {
-                'Authorization': token
-            }
-        })
+                Authorization: token,
+            },
+        });
     }
 
     async function findByIdPostagem(id: string) {
-        await buscaId(`posts/${id}`, setPostagem, {
+        await buscaId(`postagens/${id}`, setPostagem, {
             headers: {
-                'Authorization': token
-            }
-        })
+                Authorization: token,
+            },
+        });
     }
 
     function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
@@ -72,27 +72,27 @@ function CadastroPost() {
         setPostagem({
             ...postagem,
             [e.target.name]: e.target.value,
-            tema: tema
-        })
+            tema: tema,
+        });
 
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-        e.preventDefault()
+        e.preventDefault();
 
         if (id !== undefined) {
-            put(`/posts`, postagem, setPostagem, {
+            put(`/postagens`, postagem, setPostagem, {
                 headers: {
-                    'Authorization': token
-                }
-            })
+                    Authorization: token,
+                },
+            });
             alert('Postagem atualizada com sucesso');
         } else {
-            post(`/posts`, postagem, setPostagem, {
+            post(`/postagens`, postagem, setPostagem, {
                 headers: {
-                    'Authorization': token
-                }
-            })
+                    Authorization: token,
+                },
+            });
             alert('Postagem cadastrada com sucesso');
         }
         back()
@@ -116,10 +116,10 @@ function CadastroPost() {
                     <Select 
                     labelId="demo-simple-select-helper-label" 
                     id="demo-simple-select-helper"
-                        onChange={(e) => buscaId(`/tema/${e.target.value}`, setTema, {
+                        onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
                             headers: {
-                                'Authorization': token
-                            }
+                                Authorization: token,
+                            },
                         })}>
                         {
                             temas.map(tema => (

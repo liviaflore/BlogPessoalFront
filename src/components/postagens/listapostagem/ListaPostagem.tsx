@@ -16,17 +16,18 @@ function ListaPostagem() {
   const[token, setToken] = useLocalStorage('token');
 
   let history = useNavigate();
-     if(token == ''){
-      alert("Você precisa estar logado!")
+  
+  useEffect(() => {
+    if (token === "") {
+      alert("Você precisa estar logado")
       history("/login")
-     }
-  useEffect(()=>{
 
+    }
   }, [token])
 
 
   async function getPost(){
-    await busca("/posts", setPosts, {
+    await busca("/postagens", setPosts, {
       headers: {
         'Authorization': token
       }
@@ -40,7 +41,7 @@ function ListaPostagem() {
   return (
     <>
     {
-      posts.map(post => (
+      posts.map((post) => (
       <Box m={2} >
         <Card variant="outlined">
           <CardContent>
