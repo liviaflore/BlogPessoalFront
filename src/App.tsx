@@ -11,8 +11,11 @@ import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 
+import store from './store/store';
+
 import {Grid} from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import './App.css';
 
@@ -20,6 +23,7 @@ import './App.css';
 
 function App() {
   return(
+    <Provider store={store}>
     <Router>
      <Navbar />
      <div style={{ minHeight: '100vh' }}>
@@ -48,7 +52,7 @@ function App() {
      <Footer />
 
     </Router>
-    
+    </Provider>
   );
 }
 
