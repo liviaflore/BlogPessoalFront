@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {Grid, Box, Paper, Button, Typography} from '@mui/material';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";
 
@@ -38,7 +38,9 @@ function Home(){
                         <Box marginRight={1}>
                            <ModalPostagem /> 
                         </Box>
-                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        <Link to='/posts' className="text-decorator-none">
+                           <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
