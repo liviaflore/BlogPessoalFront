@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
-
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify';
 
 import './ListaPostagem.css';
 
@@ -23,7 +23,16 @@ function ListaPostagem() {
   
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado")
+      toast.error('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
       history("/login")
 
     }

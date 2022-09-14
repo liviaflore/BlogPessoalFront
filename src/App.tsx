@@ -16,14 +16,16 @@ import store from './store/store';
 import {Grid} from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 
 import './App.css';
-
+import 'react-toastify/dist/ReactToastify.css'
 
 
 function App() {
   return(
     <Provider store={store}>
+      <ToastContainer />
     <Router>
      <Navbar />
      <div style={{ minHeight: '100vh' }}>
