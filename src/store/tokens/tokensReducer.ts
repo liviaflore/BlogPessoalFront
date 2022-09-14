@@ -18,3 +18,5 @@ export const tokenReducer = (state: TokenState = initialState, action: Action) =
             return state
     }
 }
+
+//parâmetros state e action verificam o token
