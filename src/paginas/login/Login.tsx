@@ -1,5 +1,5 @@
 import React, {useState, useEffect, ChangeEvent} from 'react';
-import {Grid, Box, Typography, TextField, Button} from '@mui/material';
+import {Grid, Box, Typography, TextField, Button, FormControlLabel, Checkbox} from '@mui/material';
 import {Link, useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../services/Service';
@@ -75,39 +75,51 @@ function Login() {
     }
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
-        <Grid alignItems='center' xs={6}>
-            <Box paddingX={20}>
+        <Grid container direction='row' justifyContent='center' alignItems='center' className="background">
+        <Grid alignItems='left' xs={6}>
+            <Box paddingX={20} className="container">
                <form onSubmit={onSubmit}>
                 <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='titulologin'> Olá! </Typography>
-                <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' name='usuario' variant='outlined' margin='normal' fullWidth/>
-                <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' name='senha' variant='outlined' margin='normal' type='password' fullWidth/>
+                <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' name='usuario' variant='outlined' margin='normal' fullWidth className="usuario"/>
+                <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' name='senha' variant='outlined' margin='normal' type='password' fullWidth className="senha"/>
+                <FormControlLabel
+              control={<Checkbox value="remember" color="primary" className="lembrar"/>}
+              className="lembrar" label="Me lembre!"
+            />
+
                   <Box marginTop={2} textAlign='center'>
                     
-                      <Button type='submit' variant='contained' color='primary'>
+                      <Button type='submit' variant='contained' className="btn">
                         Entrar
                       </Button>
                     
                 </Box>
-               </form>
-               <Box display='flex' justifyContent='center' marginTop={2}>
-                <Box>
-                 <Typography variant='subtitle1' gutterBottom color='textPrimary' align='center'> Não tem uma conta?</Typography>
+
+                
+               
+               <Box marginTop={5} textAlign="center">
+                
+                 <Typography variant='subtitle1' gutterBottom color='textPrimary' align='center' className="textos1"> Não tem uma conta?</Typography>
                 </Box>
-                <Link to='/cadastroUsuario'>
-                 <Typography variant='subtitle1' gutterBottom color='textPrimary' align='center' className='textos1'>  Cadastre-se! </Typography>
+                <Link to='/cadastroUsuario' className="cadastrese">
+                 <Typography variant='subtitle1' gutterBottom color='textPrimary' align='center' className='cadastrese'>  Cadastre-se! </Typography>
                 </Link>
+                </form>
                </Box>
 
-            </Box>
+               
+
+            </Grid>
 
         </Grid>
 
-        <Grid xs={6} className='imagem1'>
+        /* <Grid xs={6} className='imagem1'>
 
-        </Grid>
+        </Grid> */
 
-        </Grid>
+        
+
+        
 
     
     );
